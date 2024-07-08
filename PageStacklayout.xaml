@@ -3,7 +3,6 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp1.PageStacklayout"
              Title="Mijn eerste XAML stacklayout">
-    <VerticalStackLayout>
         <VerticalStackLayout Margin="30,60,30,30">
             <Label Text="Notities"
                HorizontalOptions="Center"
@@ -21,8 +20,5 @@
                      WidthRequest="100"
                     Clicked="OnDeleteButtonClicked" />
             </Grid>
-            <Label x:Name="message" Text=""></Label>
-
-        </VerticalStackLayout>
     </VerticalStackLayout>
 </ContentPage>
