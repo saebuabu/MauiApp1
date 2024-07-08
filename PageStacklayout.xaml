@@ -20,5 +20,6 @@
                      WidthRequest="100"
                     Clicked="OnDeleteButtonClicked" />
             </Grid>
+        <Label x:Name="message" Text=""></Label>
     </VerticalStackLayout>
 </ContentPage>
