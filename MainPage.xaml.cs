@@ -9,17 +9,6 @@
             InitializeComponent();
         }
 
-        private void OnCounterClicked(object sender, EventArgs e)
-        {
-            count++;
-
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
-            else
-                CounterBtn.Text = $"Clicked {count} times";
-
-            SemanticScreenReader.Announce(CounterBtn.Text);
-        }
         // Method that implents a button cluck to GotoPage1Button
         private async void OnGotoPage1Clicked(object sender, EventArgs e)
         {
