@@ -19,5 +19,10 @@
         FlyoutIcon="floki.webp"
         ContentTemplate="{DataTemplate local1:CryptoCoinPage}"
         Route="CryptoCoin" />
+    <ShellContent
+        Title="Bitcoin Page"
+        FlyoutIcon="bitcoin.png"
+        ContentTemplate="{DataTemplate local1:BitcoinPage}"
+        Route="Bitcoin" />
 
 </Shell>

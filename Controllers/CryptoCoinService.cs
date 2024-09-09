@@ -49,5 +49,40 @@ namespace MauiApp1.Controllers
             }
         }
 
+        // https://api.coinlore.net/api/ticker/?id=90
+        // This method is used to get the actual details of bitcoin
+        static public async Task<CryptoCoin> GetBitcoinAsync()
+        {
+            try
+            {
+                //Initiate the HttpRequest
+                var url = "https://api.coinlore.net/api/ticker/?id=90";
+                var response = await client.GetAsync(url);
+
+                response.EnsureSuccessStatusCode();
+
+                //Deserialize the JSON response
+                if (string.IsNullOrEmpty(response.Content.ToString()))
+                {
+                    return new CryptoCoin();
+                }
+
+                var content = await response.Content.ReadAsStringAsync();
+                if (String.IsNullOrEmpty(content))
+                {
+                    return new CryptoCoin();
+                }
+
+
+                return JsonConvert.DeserializeObject<List<CryptoCoin>>(content).FirstOrDefault<CryptoCoin>() ?? new CryptoCoin();
+            }
+            catch (HttpRequestException e)
+            {
+                Console.WriteLine("\nException Caught!");
+                Console.WriteLine("Message :{0} ", e.Message);
+                return new CryptoCoin();
+            }
+        }
+
     }
 }

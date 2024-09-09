@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp1.Views.BitcoinPage"
+             Title="BitcoinPage">
+    <VerticalStackLayout>
+        <Label 
+            Text="Koers"
+            FontSize="25"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <!-- Toont de details van de CryptoCoin model -->
+        <Label 
+            FontSize="25"
+            x:Name="NameLabel" 
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Label
+            x:Name="SymbolLabel"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Label
+            x:Name="PriceLabel"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Label
+            x:Name="PercentChangeLabel"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+     
+    </VerticalStackLayout>
+</ContentPage>

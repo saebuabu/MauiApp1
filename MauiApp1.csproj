@@ -57,6 +57,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\bitcoin.png" />
 	  <None Remove="Resources\Images\Floki.webp" />
 	</ItemGroup>
 
@@ -75,6 +76,9 @@
 
 	<ItemGroup>
 	  <MauiXaml Update="PageStacklayout.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\BitcoinPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\CryptoCoinPage.xaml">

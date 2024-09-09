@@ -15,5 +15,6 @@ namespace MauiApp1.Models
         public string NameId { get; set; }
         public int Rank { get; set; }
         public double Price_usd { get; set; }
+        public double Percent_change_1h { get; set; }
     }
 }
